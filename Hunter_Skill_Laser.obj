@@ -1,7 +1,7 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
 mtllib Hunter_Skill_Laser.mtl
-g default
+g default1
 v 1.000000 0.118075 -0.038365
 v 1.000000 0.100440 -0.072974
 v 1.000000 0.072974 -0.100440
@@ -329,7 +329,7 @@ vn -1.000000 0.000000 0.000000
 vn -1.000000 0.000000 0.000000
 vn -1.000000 0.000000 0.000000
 s off
-g initialShadingGroup pCylinder1
+g initialShadingGroup initialShadingGroup1 initialShadingGroup2 pCylinder1 polySurface2 polySurface1
 f 1/1/1 2/2/2 22/3/3 21/4/4
 f 2/2/5 3/5/6 23/6/7 22/3/8
 f 3/5/9 4/7/10 24/8/11 23/6/12
