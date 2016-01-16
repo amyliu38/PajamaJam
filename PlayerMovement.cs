@@ -17,40 +17,45 @@ public class PlayerMovement : MonoBehaviour {
 		if (!canMove) {
 			return;
 		}
-		if (Input.GetAxisRaw ("Boost") > -0.9) {
+		if (!Input.GetButton ("Boost")) {
 			Vector3 disp = new Vector3 (0, 0, 0);
-			disp.x = Input.GetAxis ("Horizontal");
-			disp.z = Input.GetAxis ("Vertical");
+			disp.z = -Input.GetAxis ("Horizontal");
+			disp.x = Input.GetAxis ("Vertical");
 			this.transform.Translate (disp * Time.deltaTime * MSpeed); 
 			Vector3 rot = new Vector3 (0, 0, 0);
 			rot.y = Input.GetAxis ("Mouse X");
-			rot.x = Input.GetAxis ("Mouse Y");
+			rot.z = -Input.GetAxis ("Mouse Y");
 			this.transform.Rotate (rot * RotSpeed);
 		} else {
-			Vector3 disp = new Vector3(0, 0, 1);
+			Vector3 disp = new Vector3(1, 0, 0);
+
 			Vector3 rot = new Vector3 (0, 0, 0);
-			rot.x = Input.GetAxis ("Mouse Y");
+			rot.z = -Input.GetAxis ("Mouse Y");
 			if(Input.GetAxis ("Mouse X") < 0){
 				//if(Mathf.Rad2Deg*transform.rotation.z < 15){
-					this.transform.Rotate (new Vector3(0,0, 20) * Time.deltaTime * RotSpeed);
+				this.transform.Rotate (new Vector3(0,-20, 0) * Time.deltaTime * RotSpeed);
 				//}
-				print (Mathf.Rad2Deg*transform.rotation.z);
-				disp.x = -0.3f;
+				print (Mathf.Rad2Deg*transform.rotation.y);
+				disp.z = -0.3f;
 			}
 			else if(Input.GetAxis ("Mouse X") > 0){
 				//if(Mathf.Rad2Deg*transform.rotation.z >- 15){
-					this.transform.Rotate (new Vector3(0,0, -20) * Time.deltaTime * RotSpeed);
+					this.transform.Rotate (new Vector3(0,20, 0) * Time.deltaTime * RotSpeed);
 				//}
-				print (Mathf.Rad2Deg*transform.rotation.z);
-				disp.x = 0.3f;
+				print (Mathf.Rad2Deg*transform.rotation.y);
+				disp.z = 0.3f;
 			}
-
+			/*
 			else{
-				if(Mathf.Rad2Deg*transform.rotation.z > 5){
-				
+				if(Mathf.Rad2Deg*transform.rotation.y > 5){
+					this.transform.Rotate (new Vector3(0,-10, 0) * Time.deltaTime * RotSpeed);
 				}
-				disp.x = 0;
+				else if(Mathf.Rad2Deg*transform.rotation.y < 5){
+					this.transform.Rotate (new Vector3(0,10, 0) * Time.deltaTime * RotSpeed);
+				}
+				disp.z = 0;
 			}
+*/
 			this.transform.Rotate (rot * RotSpeed);
 			this.transform.Translate(disp * Time.deltaTime * MSpeed * 3);
 		}
