@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMovement.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlanetMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RadarController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HunterProjs.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="43" Column="48" />
+      <File FileName="Assets\Scripts\WarpProj.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerStats.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AsteroidSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AudControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpawnSound.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Clock.cs" Line="9" Column="18" />
+      <File FileName="Assets\Scripts\MenuController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
